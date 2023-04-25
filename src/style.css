@@ -43,10 +43,13 @@
     text-align: center;
     border-radius: 5px;
     flex: 4;
+    font-family: var(--font-lilita-one);
+    font-size: 1.2rem;
 }
 
 .input-container input::placeholder {
     color: var(--placeholder-color);
+    letter-spacing: 2px;
 }
 
 .input-container button {
@@ -73,20 +76,52 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    text-align: center;
+}
+
+.sec {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 3px solid var(--shadow);
+    font-size: 1.2rem;
+}
+
+.btn {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: .7rem;
+    cursor: pointer;
 }
 
 .todo {
     background-color: lightskyblue;
 }
+.todo button {
+    color: #fff;
+    background-color: lightsalmon;
+}
 .on-progress {
     background-color: lightsalmon;
+}
+.on-progress button {
+    background-color: lightgreen;
 }
 .done {
     background-color: lightgreen;
 }
 
 .image {
+    width: 300px;
+    margin: 0 auto;
     text-align: center;
+    z-index: -10;
 }
 
 .image .logo {
@@ -99,13 +134,13 @@
     width: 300px;
     height: 300px;
     left: 190px;
-    top: 75px;
-    z-index: -5;
+    top: 90px;
+    z-index: -1;
     animation-name: slide-up;
     animation-duration: 1s;
 }
 
-.logo:hover {
+.image:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 

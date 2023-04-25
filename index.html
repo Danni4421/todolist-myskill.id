@@ -11,35 +11,49 @@
 <body>
     <div class="container">
         <div class="image">
-            <img src="./src/img/Hinata.png" id="logo-img" alt="">
+            <img src="./src/img/Hinata.png" id="logo-img" alt="Figure Todo List">
             <div class="logo">
                 <h1>TODO LIST</h1>
             </div>
         </div>
-        <div class="input-container">
+        
+        <form id="todo-input" class="input-container">
             <input type="text" id="input-todo" placeholder="Masukkan Kegiatan">
-            <button>Add</button>
-        </div>
-    
+            <button type="submit" id="btn-add">Add</button>
+        </form>
+
         <div class="container-todo">
             <div id="todo">
                 <div class="header-caption">
                     <h3>Todo</h3>
+                    <div id="todos">
+                        <div class="sec todo">
+                            <h4>Menulis</h4>
+                            <button class="btn">Process</button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="on-process">
                 <div class="header-caption">
                     <h3>On Progress</h3>
+                    <div class="sec on-progress">
+                        <h4>Menulis</h4>
+                        <button class="btn">Done</button>
+                    </div>
                 </div>
             </div>
             <div id="done">
                 <div class="header-caption">
                     <h3>Is Done</h3>
+                    <div class="sec done">
+                        <h4>Menulis</h4>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="./src/script.js"></script>
+    <script src="./src/script/script.js" ></script>
 </body>
 </html>
