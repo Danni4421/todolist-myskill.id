@@ -4,20 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/img/Hinata.png">
     <title>TodoList || MySkill</title>
 </head>
 <body>
     <div class="container">
+        <div class="image">
+            <img src="./src/img/Hinata.png" id="logo-img" alt="">
+            <div class="logo">
+                <h1>TODO LIST</h1>
+            </div>
+        </div>
         <div class="input-container">
             <input type="text" id="input-todo" placeholder="Masukkan Kegiatan">
             <button>Add</button>
         </div>
     
         <div class="container-todo">
-            <div id="todo"></div>
-            <div id="on-process"></div>
-            <div id="done"></div>
+            <div id="todo">
+                <div class="header-caption">
+                    <h3>Todo</h3>
+                </div>
+            </div>
+            <div id="on-process">
+                <div class="header-caption">
+                    <h3>On Progress</h3>
+                </div>
+            </div>
+            <div id="done">
+                <div class="header-caption">
+                    <h3>Is Done</h3>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="./src/script.js"></script>
 </body>
 </html>
