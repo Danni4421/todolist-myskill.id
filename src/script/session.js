@@ -25,7 +25,6 @@ const saveTodos = () => {
         const toStringTodos = JSON.stringify(todos)
         sessionStorage.setItem(STORAGE_KEY_TODOS, toStringTodos)
     }
-    console.log(todos)
 }
 
 const saveOnProgress = () => {
@@ -79,13 +78,15 @@ const loadIsDone = () => {
     document.dispatchEvent(new Event(RENDER_DONE))
 }
 
-const removeItem = (diff, id) => {
+const removeItem = (diff) => {
     switch (diff) {
         case 0:
-            sessionStorage.removeItem(STORAGE_KEY_TODOS, id)
+            sessionStorage.removeItem(STORAGE_KEY_TODOS)
+            sessionStorage.setItem(STORAGE_KEY_TODOS, JSON.stringify(todos))
             break
-        case 1:
-            sessionStorage.removeItem(STORAGE_KEY_ON_PROGRESS, id)
+            case 1:
+            sessionStorage.removeItem(STORAGE_KEY_ON_PROGRESS)
+            sessionStorage.setItem(STORAGE_KEY_ON_PROGRESS, JSON.stringify(onProgess))
             break
     }
 }

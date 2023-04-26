@@ -98,8 +98,8 @@ const createCard = (id, value, different) => {
 const processTodo = id => {
     tempOnProgress = todos.find(todo => todo.id === id)
     onProgess.push(tempOnProgress)
-    todos.splice(id, 1)
-    removeItem(0, id)
+    todos.splice(tempOnProgress, 1)
+    removeItem(0)
 
     todoTemp.removeChild(document.getElementById(`${id}`))
     saveOnProgress()
@@ -111,8 +111,8 @@ const endProgress = id => {
     tempDone = onProgess.find(onProg => onProg.id === id)
     tempDone.isCompleted = true
     isDone.push(tempDone)
-    onProgess.splice(id, 1)
-    removeItem(1, id)
+    onProgess.splice(tempDone, 1)
+    removeItem(1)
 
     onProgressTemp.removeChild(document.getElementById(`${id}`))
     saveIsDone()
